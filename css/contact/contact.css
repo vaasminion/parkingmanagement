@@ -1,0 +1,70 @@
+#contactbox{
+	display:flex;
+	height: 90vh;
+	justify-content: center;
+	background-color: white;
+}
+#contact{
+	background-color:white;
+	display: inline-flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: space-between;
+	height: 60vh;
+	width: 24vw;
+	margin: 10vh;
+	padding: 10vh;
+	border-radius: 1vh;
+	border: solid #9785E3 1px;
+	box-shadow: 0px 0px 17px -6px rgba(0,0,0,0.75);
+}
+.contact-info{
+	margin: 1.2vw 0 0 0;
+	height: 60vh;
+	padding: 2vh 0 0 0;
+	font-size: 0.9vw;
+	display: flex;
+	flex-direction: column;
+	justify-content:space-around;
+	border: solid #9785E3;
+	background-color: #CDC5EF;
+}
+.card{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 20%;
+	cursor: pointer;
+	padding: 1vh;
+	flex-direction: column;
+}
+.card-icon{
+	font-size: 4vw;
+	width: 6vw;
+	height: 6vw;
+	text-align: center;
+	line-height: 60px !important;
+
+	transition: 0.3s linear;
+}
+.card:hover .card-icon{
+	background: none;
+	transform: scale(1.6);
+}
+.card p{
+	font-weight: 300;
+	letter-spacing: 2px;
+	max-height:0;
+	opacity: 0;
+	transition: 0.3s linear;
+}
+.card:hover p{
+	max-height: 40px;
+	opacity: 1;
+	font-weight: bold;
+	color:  black;
+}
+.icon{
+	width:auto;
+	height: auto;
+}
