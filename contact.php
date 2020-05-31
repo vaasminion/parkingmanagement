@@ -10,7 +10,7 @@
 <?php include("include/header.php")?>
 <div id="contactbox">
   <div id="contact">
-<h2>Contact</h2>
+<h1 id="title">Contact</h1>
 	<div class="contact-info">
 		<div class="card">
 			<img class="card-icon" class="icon" src="image/icon.svg">

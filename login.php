@@ -48,8 +48,5 @@
     </form>
 
 </div>
-<footer>
-    <p>Posted by: Parking Space</p>
-</footer>
 </body>
 </html>

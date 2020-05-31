@@ -23,7 +23,7 @@
     </nav>
     <div id="myaccount">
       <h1>WELCOME BACK</h1>
-      <img id="profile" src="./image/profile.png">
+      <img id="profile" src="./image/profile.svg">
       <p id="profilename"><?php echo($_SESSION['username'])?></p>
     </div>
   </div>

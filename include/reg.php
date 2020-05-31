@@ -16,6 +16,6 @@ $sql = "INSERT INTO user_table(username,password,email,firstn,lastn,city,phone) 
   }*/
   if($connect->query($sql)==TRUE)
   {
-      echo("SQL");
+      header('location: ..\login.php');
   }
 ?>
