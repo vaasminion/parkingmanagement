@@ -18,4 +18,8 @@ $sql = "INSERT INTO user_table(username,password,email,firstn,lastn,city,phone) 
   {
       header('location: ..\login.php');
   }
+  else{
+    header('location: ..\registration.php');
+
+  }
 ?>

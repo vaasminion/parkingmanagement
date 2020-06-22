@@ -5,24 +5,7 @@
     <title>Parking</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link rel="stylesheet" type="text/css" href="./css/login/login.css">
-    <script type="text/javascript">
-    function validate()
-    {
-    var username = document.loginbox.user.value;
-    var password = document.loginbox.password.value;
-
-    if (username==null || username=="")
-    {
-      alert("Username can't be blank");
-      return false;
-    }
-    else if (password==null || password=="")
-    {
-      alert("password can't be blank");
-      return false;
-    }
-    }
-</script>
+    <script type="text/javascript" src="./js/login_validate.js"></script>
 </head>
 <body>
 <?php include("include/header.php")?>
@@ -31,19 +14,22 @@
         <h1 id="loginhere">Login Here</h1>
         <h5>Welcome Back !</h5>
         <div id="login_input">
-        <input type="text" id="username" placeholder="Username or Email ID" name="user">
-         <p id="loginerror"></p><br>
-        <input type="password" id="password" placeholder="Password" name="password">
+        <input type="text" id="username" class='valid' placeholder="Username or Email ID" name="user">
+        <br>
+        <input type="password" id="password" class='valid' placeholder="Password" name="password">
             <p id="passworderror"></p>
         </div>
+        <p id="loginerror"></p><br>
         <div id="login-button">
-        <input id="button" type="submit" name="">
-        <input id="button" type="reset" >
+        <input class="button" type="submit" name="">
+        <input class="button" type="reset" >
+        <p id="loginerror"></p>
+
         </div>
         <hr>
         <div id="create_account">
         <h4 id="newaccountheader">Need An Account?</h4>
-        <input id="button" type="button" onclick="location.href='./registration.php'" id="create_button" value="Create New Account">
+        <input class="button" type="button" onclick="location.href='./registration.php'" id="create_button" value="Create New Account">
         </div>
     </form>
 

@@ -14,9 +14,7 @@ if(mysqli_num_rows($result)>0){
   }
 }
 else {
-  echo '<script type="text/javascript">';
-echo ' alert("JavaScript Alert Box by PHP")';
-echo '</script>';
-  header('location: ..\login.php');
+  echo('Password and Confirm password should match!');
+  //header('location: ..\login.php');
 }
 ?>

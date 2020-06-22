@@ -23,15 +23,28 @@ include("./include/booking.php")?>
    </ul>
    </nav>
    <div id="bookslot">
-     <form id="slot" method="post">
+     <form id="slot" method="POST">
        <div id="checka">
          <label>Choose Location: </label><select id="location" name="location" >
            <option value="delhi">Delhi</option>
            <option value="ghaziabad">Ghaziabad</option>
            <option value="noida" >Noida</option>
          </select>
-         <button type="submit" name="check" class="bbutton">Check Availibilty</button>
-         <p><?php if(isset($_POST['check']))echo("Available Slot in ".$_POST['location']." : ".check_availibility()); ?></p>
+         <button type="button" name="check" class="bbutton" onclick="avai()">Check Availibilty</button>
+         <script>
+            function avai(){
+              str = document.getElementById('location').value;
+              var xhttp = new XMLHttpRequest();
+              xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("output").innerHTML = this.responseText;
+                }
+              };
+        xhttp.open("GET", "./include/check_available.php?location="+str, true);
+  xhttp.send();
+            }
+         </script>
+         <h3 id="output"></h3>
        </div>
        <div id="booking">
          <label for="carno">Enter Car no :</label><input type="text" name="carno" value="" class="in"><br>
